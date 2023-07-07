@@ -3,6 +3,9 @@ const scissor = "scissor";
 const rock = "rock";
 const paper = "paper";
 
+var playerScore = 0;
+var computerScore = 0;
+
 function getComputerChoice(){
     let a = Math.floor(Math.random() * 3)
     
@@ -14,7 +17,7 @@ function getComputerChoice(){
         return scissor
 }
 
-function game(){
+function roud(){
 
     const computerChoice  = getComputerChoice();
 
@@ -29,17 +32,32 @@ function game(){
         console.log("its a draw");
     else if(playerChoice == scissor && computerChoice == paper){
         console.log("You Won! \nCPU played " + computerChoice);
+        playerScore ++;
     }
     else if(playerChoice == rock && computerChoice == scissor){
         console.log("You Won! \nCPU played " + computerChoice);
+        playerScore ++;
     }   
     else if(playerChoice == paper && computerChoice == rock){
         console.log("You Won! \nCPU played " + computerChoice);
+        playerScore ++;
     }   
     else
     {
         console.log("You Lost! \nCPU played " + computerChoice);
+        computerScore ++;
+    }
+
+}
+
+function game(){
+    
+    for (let i = 1; i <= 5; i++)
+    {
+        console.log("-------------- Round " + i + " --------------");
+        roud();
+        console.log("Player: " + playerScore + "\nComputer: " + computerScore);
     }
 }
 
-game()
+game();
