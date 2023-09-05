@@ -1,0 +1,61 @@
+#resultDiv{
+    display: flex;   
+    flex-direction: column;
+}
+
+#resultDiv > p{
+    text-align: center;
+} 
+
+#scoreDivP{
+    display: flex;
+    justify-content: center;
+}
+
+#scoreDivP > p{
+    width: 10%;
+    text-align: center;
+}
+
+#scoreDiv{
+    display: flex;
+    justify-content: center;
+}
+
+#scoreDiv > p{
+    width: 10%;
+    text-align: center;
+}
+
+#result {
+    text-align: center;
+}
+
+#buttonsDiv{
+    display: flex;
+    justify-content: center;
+}
+
+#buttonsDiv > button{
+    width: 11%;
+    aspect-ratio: 1;
+}
+
+#rockButton{
+    background-image: url('rock.png');
+    background-size: cover;
+}
+
+#paperButton{
+    background-image: url('paper.png');
+    background-size: cover;
+}
+
+#scissorButton{
+    background-image: url('scissor.png');
+    background-size: cover;
+}
+
+
+
+
